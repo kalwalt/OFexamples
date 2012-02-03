@@ -1,0 +1,3 @@
+This is a collection of examples of various types for Openframework:
+fboRenderToTexture shows how to apply an FBO to an object through a 3d texture. Projects for linux32 Codeblocks are included
+kalwaltart 01022012
