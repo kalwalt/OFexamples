@@ -44,9 +44,9 @@ void setupGlMaterial(){
 void testApp::setupOFmaterial(){
 
     diffuse.set(0.4f,0.4f,0.4f,1.0f);
-	ambient.set(0.4f,0.4f,0.4f,1.0f);
-	specular.set(0.01f,0.2f,0.2f,1.0f);
-	emissive.set(0.0f,0.0f,0.0f,1.0f);
+    ambient.set(0.4f,0.4f,0.4f,1.0f);
+    specular.set(0.01f,0.2f,0.2f,1.0f);
+    emissive.set(0.0f,0.0f,0.0f,1.0f);
     mat.setColors(diffuse,ambient,specular,emissive);
     mat.setShininess(120.1f);
 
@@ -62,12 +62,12 @@ void testApp::setupOFlight(){
     light.setAttenuation(0.2,0.3,0.4);
 
     diffuseL.set(1.0f,1.0f,1.0f,1.0f);
-	ambientL.set(0.0f,0.0f,0.0f,1.0f);
-	specularL.set(1.0f,1.0f,1.0f,1.0f);
+    ambientL.set(0.0f,0.0f,0.0f,1.0f);
+    specularL.set(1.0f,1.0f,1.0f,1.0f);
 
     light.setAmbientColor(diffuseL);
-	light.setDiffuseColor(ambientL);
-	light.setSpecularColor(specularL);
+    light.setDiffuseColor(ambientL);
+    light.setSpecularColor(specularL);
 
 }
 
@@ -75,29 +75,29 @@ void testApp::add_Face(ofMesh& mesh, ofVec3f a, ofVec3f b, ofVec3f c) {
 
 
     int rows = img.getWidth()*3;
-	int cols = img.getHeight()*3;
+    int cols = img.getHeight()*3;
     float spaceX = 8;
-	float spaceY = 8;
+    float spaceY = 8;
 
     int sizeW = spaceX * rows;
     int sizeH = spaceY * cols;
     int width = img.getWidth();
-	int height = img.getHeight();
+    int height = img.getHeight();
 
-	ofVec3f normal = ((b - a).cross(c - a)).normalize();
+    ofVec3f normal = ((b - a).cross(c - a)).normalize();
 
-	mesh.addNormal(normal);
-	mesh.addVertex(a);
-	mesh.addTexCoord(ofVec2f(a.x/width,a.y/height));
+    mesh.addNormal(normal);
+    mesh.addVertex(a);
+    mesh.addTexCoord(ofVec2f(a.x/width,a.y/height));
 
 
-	mesh.addNormal(normal);
-	mesh.addVertex(b);
-	mesh.addTexCoord(ofVec2f(b.x/width,b.y/height));
+    mesh.addNormal(normal);
+    mesh.addVertex(b);
+    mesh.addTexCoord(ofVec2f(b.x/width,b.y/height));
 
-	mesh.addNormal(normal);
-	mesh.addVertex(c);
-	mesh.addTexCoord(ofVec2f(c.x/width,c.y/height));
+    mesh.addNormal(normal);
+    mesh.addVertex(c);
+    mesh.addTexCoord(ofVec2f(c.x/width,c.y/height));
 
 }
 
@@ -127,12 +127,11 @@ void testApp::setup(){
     NRMmap.loadImage("Floaterrain_TN.png");
 
     img.loadImage("Float_Terrain.exr");
-    //img.loadImage("mountains.raw");
-    //bumpshader.load("bumpmap");
+    
     bumpshader.load("NormalMap");
-    //bumpshader.load("DiffBumpSpec");
+   
 
-     ofEnableLighting();
+    ofEnableLighting();
     light.enable();
 
 
@@ -187,29 +186,30 @@ void testApp::draw(){
     ofEnableLighting();
 
 	easyCam.begin();
+
 		ofScale(1, -1, 1);
 		ofRotateX(60);
 		ofTranslate(-img.getWidth() / 2, -img.getHeight() / 2, 0);
 
         mat.begin();
-		bumpshader.begin();
+	bumpshader.begin();
 
         bumpshader.setUniformTexture("colorMap",DIFmap,DIFmap.getTextureReference().getTextureData().textureID);
         bumpshader.setUniformTexture("glossMap",GLSmap,GLSmap.getTextureReference().getTextureData().textureID);
         bumpshader.setUniformTexture("normalMap",NRMmap,NRMmap.getTextureReference().getTextureData().textureID);
 
 
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
 		mesh.draw();
 		//mesh.drawWireframe();
-    bumpshader.end();
-    mat.end();
+        bumpshader.end();
+        mat.end();
 	easyCam.end();
 
 
-   ofDisableLighting();
-glDisable(GL_DEPTH_TEST);
+     ofDisableLighting();
+     glDisable(GL_DEPTH_TEST);
 
 }
 

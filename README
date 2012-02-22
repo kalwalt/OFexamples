@@ -1,7 +1,9 @@
 This is a collection of examples of various types for Openframework:
 
--fboRenderToTexture shows how to apply an FBO to an object through a 3d texture. Projects for linux32 Codeblocks are included.
+- fboRenderToTexture shows how to apply an FBO to an object through a 3d texture. Projects for linux32 Codeblocks are included.
 
--FractalFloatTerrainExample is an improved floatingPointImageExample example, a terrain with texture maps, normal maps, specular maps. Tangents and binormals are calculated by the shader. Projects for linux32 Codeblocks are included.
+- FractalFloatTerrainExample is an improved floatingPointImageExample example, a terrain with texture maps, normal maps, specular maps. Tangents and binormals are calculated by the shader. Projects for linux32 Codeblocks are included. All the textures ( texture map, normal map, specular map and height map) where made with L3DT terrain editor http://www.bundysoft.com/L3DT/ after exporting the height map was converted from .png to .exr in Photoshop (Remember: you must convert to 32bit format before exporting to .exr format).  
 
-kalwaltart 01022012
+- pointPPLShaderExample and pointlightShaderExample_swiftless are two example of shader lighting inside OpenFFramework.
+
+kalwaltart 21022012
