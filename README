@@ -4,6 +4,9 @@ This is a collection of examples of various types for Openframework:
 
 - FractalFloatTerrainExample is an improved floatingPointImageExample example, a terrain with texture maps, normal maps, specular maps. Tangents and binormals are calculated by the shader. Projects for linux32 Codeblocks are included. All the textures ( texture map, normal map, specular map and height map) where made with L3DT terrain editor http://www.bundysoft.com/L3DT/ after exporting the height map was converted from .png to .exr in Photoshop (Remember: you must convert to 32bit format before exporting to .exr format).  
 
-- pointPPLShaderExample and pointlightShaderExample_swiftless are two example of shader lighting inside OpenFFramework.
+- pointPPLShaderExample and pointlightShaderExample_swiftless are two example of shader lighting inside OpenFramework.
 
-kalwaltart 21022012
+- Sinewave_openCL_Book is an example of using openCL inside linux. (after trying to use without success MSAopenCL...) . Wait for examples using libstdcl : https://github.com/browndeer/coprthr and 
+  http://www.browndeertechnology.com/
+
+kalwaltart 29022012
