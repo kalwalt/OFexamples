@@ -9,4 +9,6 @@ This is a collection of examples of various types for Openframework:
 - Sinewave_openCL_Book is an example of using openCL inside linux. (after trying to use without success MSAopenCL...) . Wait for examples using libstdcl : https://github.com/browndeer/coprthr and 
   http://www.browndeertechnology.com/
 
-kalwaltart 29022012
+- ShadowMap example of shadow mapping in OF 007 adapted from Akira Hayasaka example http://forum.openframeworks.cc/index.php?topic=4529.0
+
+kalwaltart 28032012
