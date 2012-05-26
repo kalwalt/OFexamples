@@ -11,4 +11,6 @@ This is a collection of examples of various types for Openframework:
 
 - ShadowMap example of shadow mapping in OF 007 adapted from Akira Hayasaka example http://forum.openframeworks.cc/index.php?topic=4529.0
 
-kalwaltart 28032012
+- ClassicNoise2Dexample is based on a Glsl shader taken from : https://github.com/ashima/webgl-noise/wiki very useful resource for Noise shader.
+
+kalwaltart 26052012
